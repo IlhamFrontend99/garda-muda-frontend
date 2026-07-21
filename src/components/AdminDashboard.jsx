@@ -56,7 +56,7 @@ export default function AdminDashboard({
   });
 
   const [isSavingCms, setIsSavingCms] = useState(false);
-  const [newCard, setNewCard] = useState({ title: '', subtitle: '', tag: '🥇 Foto Juara', image: '' });
+  const [newCard, setNewCard] = useState({ title: '', subtitle: '', tag: 'ðŸ¥‡ Foto Juara', image: '' });
   const [newPanitia, setNewPanitia] = useState({ name: '', role: '', photo: '' });
 
   const [formData, setFormData] = useState({
@@ -346,7 +346,7 @@ export default function AdminDashboard({
     }
     const updatedCards = [...cmsForm.showcase_cards, newCard];
     setCmsForm({ ...cmsForm, showcase_cards: updatedCards });
-    setNewCard({ title: '', subtitle: '', tag: '🥇 Foto Juara', image: '' });
+    setNewCard({ title: '', subtitle: '', tag: 'ðŸ¥‡ Foto Juara', image: '' });
   };
 
   const handleRemoveCard = (index) => {
@@ -715,7 +715,7 @@ export default function AdminDashboard({
 
                   {newPanitia.photo && (
                     <span className="text-[11px] text-emerald-500 font-bold truncate">
-                      ✅ Foto Perorangan Terunggah
+                      âœ… Foto Perorangan Terunggah
                     </span>
                   )}
                 </div>
@@ -772,14 +772,14 @@ export default function AdminDashboard({
                     className={`rounded-xl px-3 py-2 text-xs border outline-none ${isDarkMode ? 'bg-slate-900 border-slate-800 text-white' : 'bg-white border-slate-300 text-slate-900'}`}
                   />
                   <select
-                    value={newCard.tag || '🥇 Foto Juara'}
+                    value={newCard.tag || 'ðŸ¥‡ Foto Juara'}
                     onChange={(e) => setNewCard({ ...newCard, tag: e.target.value })}
                     className={`rounded-xl px-3 py-2 text-xs border outline-none font-bold ${isDarkMode ? 'bg-slate-900 border-slate-800 text-white' : 'bg-white border-slate-300 text-slate-900'}`}
                   >
-                    <option value="🥇 Foto Juara">🥇 Foto Juara</option>
-                    <option value="🔥 Momen Seru">🔥 Momen Seru</option>
-                    <option value="📸 Dokumentasi">📸 Dokumentasi</option>
-                    <option value="🎥 Video Dokumen">🎥 Video Dokumen</option>
+                    <option value="ðŸ¥‡ Foto Juara">ðŸ¥‡ Foto Juara</option>
+                    <option value="ðŸ”¥ Momen Seru">ðŸ”¥ Momen Seru</option>
+                    <option value="ðŸ“¸ Dokumentasi">ðŸ“¸ Dokumentasi</option>
+                    <option value="ðŸŽ¥ Video Dokumen">ðŸŽ¥ Video Dokumen</option>
                   </select>
                 </div>
 
@@ -792,7 +792,7 @@ export default function AdminDashboard({
 
                   {newCard.image && (
                     <span className="text-[11px] text-emerald-500 font-bold truncate max-w-xs">
-                      ✅ Terunggah: {newCard.image.split('/').pop()}
+                      âœ… Terunggah: {newCard.image.split('/').pop()}
                     </span>
                   )}
                 </div>
@@ -811,7 +811,7 @@ export default function AdminDashboard({
                   <div key={idx} className={`p-3 rounded-2xl border flex items-center justify-between ${isDarkMode ? 'bg-slate-950 border-slate-800' : 'bg-white border-slate-200'}`}>
                     <div className="truncate pr-2">
                       <p className="font-bold text-xs truncate">{c.title}</p>
-                      <p className="text-[10px] text-amber-500 truncate">{c.tag || '3D SHOWCASE'} • {c.subtitle}</p>
+                      <p className="text-[10px] text-amber-500 truncate">{c.tag || '3D SHOWCASE'} â€¢ {c.subtitle}</p>
                     </div>
                     <button type="button" onClick={() => handleRemoveCard(idx)} title="Hapus Kartu Ini" className="p-1.5 rounded-lg bg-red-600/20 text-red-500 hover:bg-red-600 hover:text-white transition">
                       <Trash2 size={13} />

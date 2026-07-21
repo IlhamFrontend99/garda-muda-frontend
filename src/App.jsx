@@ -150,7 +150,7 @@ export default function App() {
   };
 
   const filteredLombas = lombas.filter((l) => {
-    if (selectedKategori === '🏆 Hasil Juara') {
+    if (selectedKategori === 'ðŸ† Hasil Juara') {
       return l.status === 'Selesai' || (l.juara_1 && l.juara_1 !== '');
     }
     const matchKategori = selectedKategori === 'Semua' || l.kategori === selectedKategori;
@@ -198,7 +198,7 @@ export default function App() {
                 isDarkMode ? 'bg-slate-900/80 border-slate-800' : 'bg-white border-slate-200'
               }`}>
                 <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
-                  {['Semua', 'Anak-Anak', 'Remaja', 'Dewasa', 'Umum', '🏆 Hasil Juara'].map((kat) => (
+                  {['Semua', 'Anak-Anak', 'Remaja', 'Dewasa', 'Umum', 'ðŸ† Hasil Juara'].map((kat) => (
                     <button
                       key={kat}
                       onClick={() => setSelectedKategori(kat)}
