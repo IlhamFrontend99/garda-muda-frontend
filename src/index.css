@@ -1,0 +1,95 @@
+﻿html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 3D PERSPECTIVE & HOLOGRAM UI EFFECTS */
+.perspective-1200 {
+  perspective: 1200px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* ANIMASI BENDERA KIRI 3D */
+@keyframes flag-wave-left {
+  0%, 100% {
+    transform: perspective(500px) rotateY(12deg) rotateX(-3deg) translateY(0px) skewY(-2deg);
+    filter: drop-shadow(-8px 12px 20px rgba(225, 29, 72, 0.45));
+  }
+  50% {
+    transform: perspective(500px) rotateY(-8deg) rotateX(3deg) translateY(-6px) skewY(2deg);
+    filter: drop-shadow(-12px 18px 25px rgba(225, 29, 72, 0.65));
+  }
+}
+
+/* ANIMASI BENDERA KANAN 3D */
+@keyframes flag-wave-right {
+  0%, 100% {
+    transform: perspective(500px) rotateY(-12deg) rotateX(3deg) translateY(0px) skewY(2deg);
+    filter: drop-shadow(8px 12px 20px rgba(225, 29, 72, 0.45));
+  }
+  50% {
+    transform: perspective(500px) rotateY(8deg) rotateX(-3deg) translateY(-6px) skewY(-2deg);
+    filter: drop-shadow(12px 18px 25px rgba(225, 29, 72, 0.65));
+  }
+}
+
+.animate-flag-left {
+  animation: flag-wave-left 3.8s ease-in-out infinite;
+  transform-origin: right center;
+}
+
+.animate-flag-right {
+  animation: flag-wave-right 3.8s ease-in-out infinite;
+  transform-origin: left center;
+}
+
+/* ANIMASI FLOATING 3D */
+@keyframes float-hero {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1deg);
+  }
+}
+
+.animate-float-hero {
+  animation: float-hero 4.2s ease-in-out infinite;
+}
+
+/* SHIMMER GLOW FOR PROGRESS BAR */
+@keyframes shimmer-flow {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, #dc2626 0%, #f59e0b 50%, #dc2626 100%);
+  background-size: 200% 100%;
+  animation: shimmer-flow 2.2s linear infinite;
+}
+
+/* NEON GLOW PULSE */
+@keyframes neon-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(225, 29, 72, 0.3), inset 0 0 15px rgba(225, 29, 72, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(225, 29, 72, 0.6), inset 0 0 25px rgba(245, 158, 11, 0.4);
+  }
+}
+
+.glow-card {
+  animation: neon-pulse 3.5s ease-in-out infinite;
+}
