@@ -18,7 +18,6 @@ export default function Hero({ settings = {}, onOpenRegistrasi, isDarkMode }) {
 
   return (
     <section className="relative overflow-hidden pt-8 pb-12 sm:pt-12 sm:pb-16">
-      {/* Red Glow Backdrop */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] sm:w-[500px] h-[320px] sm:h-[500px] bg-red-600/15 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10 text-center space-y-6">
@@ -26,7 +25,7 @@ export default function Hero({ settings = {}, onOpenRegistrasi, isDarkMode }) {
         {/* LOGO BADGES CONTAINER */}
         <div className="flex items-center justify-center space-x-4 sm:space-x-6 pt-2">
           
-          {/* Logo 1: Garuda Pancasila */}
+          {/* Logo 1: Garuda / Custom Admin Logo */}
           <motion.div 
             whileHover={{ scale: 1.08, rotate: -2 }}
             className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-slate-900/90 border border-red-500/40 p-2.5 flex items-center justify-center shadow-[0_0_20px_rgba(220,38,38,0.3)] backdrop-blur-md"
@@ -34,20 +33,20 @@ export default function Hero({ settings = {}, onOpenRegistrasi, isDarkMode }) {
             {!logoUtamaError && logoUtamaUrl ? (
               <img 
                 src={logoUtamaUrl} 
-                alt="Garuda Pancasila" 
+                alt="Logo Utama" 
                 onError={() => setLogoUtamaError(true)}
                 className="w-full h-full object-contain drop-shadow"
               />
             ) : (
               <img 
                 src="https://upload.wikimedia.org/wikipedia/commons/9/90/National_emblem_of_Indonesia_Garuda_Pancasila.svg" 
-                alt="Garuda Pancasila Fallback" 
+                alt="Garuda Fallback" 
                 className="w-full h-full object-contain"
               />
             )}
           </motion.div>
 
-          {/* Logo 2: Emblem Resmi HUT RI 81 Vector SVG */}
+          {/* Logo 2: Emblem HUT RI 81 / Custom Admin Logo */}
           <motion.div 
             whileHover={{ scale: 1.08, rotate: 2 }}
             className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-slate-900/90 border border-amber-500/40 p-2 flex items-center justify-center shadow-[0_0_20px_rgba(245,158,11,0.3)] backdrop-blur-md"
@@ -64,7 +63,7 @@ export default function Hero({ settings = {}, onOpenRegistrasi, isDarkMode }) {
             )}
           </motion.div>
 
-          {/* Logo 3: Logo Garda Muda (Opsional) */}
+          {/* Logo 3: Logo Garda Muda (Optional) */}
           {logoGardaUrl && (
             <motion.div 
               whileHover={{ scale: 1.08 }}
