@@ -1,3 +1,4 @@
+import { API_BASE_URL } from './config/api';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Navbar from './components/Navbar';
@@ -13,7 +14,7 @@ import SplashScreen from './components/SplashScreen';
 import Footer from './components/Footer';
 import { Trophy, Search } from 'lucide-react';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api';
+
 
 export default function App() {
   const [view, setView] = useState('user');
@@ -150,7 +151,7 @@ export default function App() {
   };
 
   const filteredLombas = lombas.filter((l) => {
-    if (selectedKategori === 'ðŸ† Hasil Juara') {
+    if (selectedKategori === 'Ã°Å¸Ââ€  Hasil Juara') {
       return l.status === 'Selesai' || (l.juara_1 && l.juara_1 !== '');
     }
     const matchKategori = selectedKategori === 'Semua' || l.kategori === selectedKategori;
@@ -198,7 +199,7 @@ export default function App() {
                 isDarkMode ? 'bg-slate-900/80 border-slate-800' : 'bg-white border-slate-200'
               }`}>
                 <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
-                  {['Semua', 'Anak-Anak', 'Remaja', 'Dewasa', 'Umum', 'ðŸ† Hasil Juara'].map((kat) => (
+                  {['Semua', 'Anak-Anak', 'Remaja', 'Dewasa', 'Umum', 'Ã°Å¸Ââ€  Hasil Juara'].map((kat) => (
                     <button
                       key={kat}
                       onClick={() => setSelectedKategori(kat)}
