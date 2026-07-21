@@ -26,15 +26,15 @@ export default function HutRi81Logo({ className = "w-16 h-16" }) {
           </linearGradient>
         </defs>
 
-        <!-- Outer Ring Badge -->
+        {/* Outer Ring Badge */}
         <circle cx="100" cy="100" r="92" fill="#090d16" stroke="url(#goldGradient)" strokeWidth="4" />
         <circle cx="100" cy="100" r="84" fill="none" stroke="url(#redGradient)" strokeWidth="2" strokeDasharray="6 4" />
 
-        <!-- Red & White Merah Putih Ribbon Background -->
+        {/* Red & White Merah Putih Ribbon Background */}
         <path d="M25,75 C60,45 140,45 175,75 L175,125 C140,155 60,155 25,125 Z" fill="url(#redGradient)" />
         <path d="M25,100 C60,120 140,120 175,100 L175,125 C140,155 60,155 25,125 Z" fill="url(#whiteGradient)" />
 
-        <!-- Header Text: HUT RI -->
+        {/* Header Text: HUT RI */}
         <text
           x="100"
           y="48"
@@ -48,7 +48,7 @@ export default function HutRi81Logo({ className = "w-16 h-16" }) {
           HUT RI
         </text>
 
-        <!-- Bold 81 Emblem Text -->
+        {/* Bold 81 Emblem Text */}
         <text
           x="100"
           y="118"
@@ -65,7 +65,7 @@ export default function HutRi81Logo({ className = "w-16 h-16" }) {
           81
         </text>
 
-        <!-- Subtext Year -->
+        {/* Subtext Year */}
         <text
           x="100"
           y="162"
@@ -79,7 +79,7 @@ export default function HutRi81Logo({ className = "w-16 h-16" }) {
           1945 - 2026
         </text>
 
-        <!-- Star Top Ornament -->
+        {/* Star Top Ornament */}
         <path d="M100,22 L103,28 L109,29 L104,33 L106,39 L100,36 L94,39 L96,33 L91,29 L97,28 Z" fill="url(#goldGradient)" />
       </svg>
     </div>
